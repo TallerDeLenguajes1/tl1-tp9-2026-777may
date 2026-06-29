@@ -19,6 +19,7 @@ using (var sw = new StreamWriter(Path.Combine(direccion, "archivo.csv")))
     sw.WriteLine("Mica; Perez; 402060; 40; ruta 56");
 }
 //! En el pdf hay una opcion File.WriteAllLines(ruta, lineas);      estos no son stream
+/**
 // La mejor forma de escribirlo
 // string[] headers = ["Nombre", "Apellido", "DNI", "Edad", "Direccion"];
 // string[][] datos =
@@ -35,7 +36,7 @@ using (var sw = new StreamWriter(Path.Combine(direccion, "archivo.csv")))
 //     foreach (var fila in datos)
 //         sw.WriteLine(string.Join("; ", fila));
 // }
-
+*/
 
 using (var sw = new StreamReader(Path.Combine(direccion, "archivo.csv")))
 {
@@ -56,14 +57,16 @@ using (var sw = new StreamReader(Path.Combine(direccion, "archivo.csv")))
         Console.WriteLine($"\nNombre: {palabras[0]}, Apellido: {palabras[1]}, Edad: {palabras[3]} años.\n");
     }
     Console.WriteLine($"======================================================================================================");
-    // for (int i = 1; i <= texto.Count; i++)
+    /** for (int i = 1; i <= texto.Count; i++)
     // {
 
     //     Console.WriteLine($"\n{texto[i]}\n");
         
     // }
-    
+    */
 }
+
+
 string rutaCancion = @"C:\Users\mayri\Downloads\The Mystery Artist - Bones (part of flesh).mp3";
 using (var fs = new FileStream(rutaCancion, FileMode.Open))
 {
